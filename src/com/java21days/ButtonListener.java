@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 
 public class ButtonListener extends JFrame implements ActionListener {
     Dimension dim = new Dimension(500, 500);
+    int clickCounter = 0;
 
     ButtonListener(String title, String button){
         super(title);
@@ -18,13 +19,17 @@ public class ButtonListener extends JFrame implements ActionListener {
         btn.addActionListener(this);
         panel.add(btn);
         add(panel);
-
         setVisible(true);
         pack();
     }
 
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-        System.out.println("This was clicked");
+        clickCounter++;
+        if(clickCounter==1){
+            System.out.println("This has been clicked 1 time");
+        } else {
+            System.out.println("This has been clicked " + clickCounter + " times");
+        }
     }
 }
