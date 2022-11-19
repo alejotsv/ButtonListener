@@ -12,7 +12,15 @@ public class ButtonListener extends JFrame implements ActionListener {
         super(title);
         setSize(dim);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        JPanel panel = new JPanel();
+        JButton btn = new JButton(button);
+        btn.addActionListener(this);
+        panel.add(btn);
+        add(panel);
 
+        setVisible(true);
+        pack();
     }
 
     @Override
