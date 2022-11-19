@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ButtonListener extends JFrame implements ActionListener {
-    Dimension dim = new Dimension(500, 500);
+    Dimension dim = new Dimension(200, 200);
     int clickCounter = 0;
 
     ButtonListener(String title, String button){
